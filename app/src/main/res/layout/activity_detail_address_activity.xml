@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".user.activity.DetailAddressActivityActivity">
+  <android.support.constraint.ConstraintLayout
+          android:id="@+id/tab"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/dp_50"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <ImageView
+              android:id="@+id/back"
+              android:layout_width="@dimen/dp_50"
+              android:layout_height="match_parent"
+              android:paddingHorizontal="@dimen/dp_20"
+              android:paddingVertical="@dimen/dp_17"
+              android:src="@mipmap/back_black"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <TextView
+              android:id="@+id/title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="详细地址"
+              android:textColor="@color/black"
+              android:textSize="@dimen/sp_16"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/save"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="16dp"
+          android:text="保存"
+          android:textColor="@color/blue_nomal"
+          android:textSize="@dimen/sp_14"
+          app:layout_constraintBottom_toBottomOf="@+id/title"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/title" />
+
+
+  </android.support.constraint.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab">
+
+
+        <EditText
+            android:id="@+id/edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_verify_code_edit2"
+            android:gravity="top"
+            android:hint="请输入您的地址"
+            android:maxLength="120"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_30"
+            android:textSize="@dimen/sp_13" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

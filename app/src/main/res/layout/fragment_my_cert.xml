@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".user.fragment.MyCertFragment">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv_cert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_8" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <include
+        layout="@layout/load_fail"
+        android:visibility="gone" />
+
+    <com.edencity.customer.custum.TwoBallRotationProgressBar
+        android:layout_width="match_parent"
+        android:id="@+id/loading"
+        android:visibility="gone"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

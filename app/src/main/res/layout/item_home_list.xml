@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll"
+    android:layout_marginVertical="@dimen/dp_5"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="@dimen/dp_4"
+        app:cardElevation="@dimen/dp_2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <com.edencity.customer.custum.RoundImageView4dp
+                android:id="@+id/item_iv"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/dp_3"
+                android:layout_height="110dp"
+                android:scaleType="fitXY" />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_iv"
+        android:layout_alignStart="@+id/item_iv"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="我司哦"
+        android:textColor="#333333"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <com.edencity.customer.custum.MyNormalTextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_16"
+        android:layout_below="@id/item_title"
+        android:layout_alignLeft="@id/item_title"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:drawableLeft="@mipmap/address"
+        android:drawablePadding="@dimen/dp_5"
+        android:ellipsize="end"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        android:text="山东大学"
+        android:textColor="#999999"
+        android:textSize="10sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

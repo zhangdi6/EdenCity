@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/rl_root_bas"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_camera"
+        android:layout_marginTop="@dimen/previewViewMarginTop">
+
+        <cn.cloudwalk.libface.camera.CwDetectPreview
+            android:id="@+id/preview"
+            android:layout_width="@dimen/previewViewWidth"
+            android:layout_height="@dimen/previewViewHeigth"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/top_iv_back"
+            android:layout_width="@dimen/previewViewWidth"
+            android:layout_height="@dimen/previewViewHeigth"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_bas_mask_circle" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/top_iv"
+            android:layout_width="@dimen/previewViewWidth"
+            android:layout_height="@dimen/previewViewHeigth"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_bas_mask_circle_no_face" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/top_iv1"-->
+        <!--android:layout_width="@dimen/previewViewWidth"-->
+        <!--android:layout_height="@dimen/previewViewHeigth"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:src="@drawable/ic_bas_mask_circle_hava_face" />-->
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/bt_close_detect"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_bas_ui_close" />
+
+
+        <com.icbc.bas.face.view.RoundProgressBarWidthNumber
+            android:id="@+id/cloudwalk_face_step_procress"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            android:max="30"
+            android:progress="30" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rl_camera"
+        android:id="@+id/bottom_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white">
+
+        <com.icbc.bas.face.view.CustomViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ic_icbc_logo"
+            android:layout_centerInParent="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icbc_logo"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/rl_result"
+        android:layout_marginBottom="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <com.icbc.bas.face.view.RoundProgressBar
+            android:id="@+id/pb_circle"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iv_result"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cloudwalk_gou" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_frame_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="0fps"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:visibility="gone" />
+</RelativeLayout>

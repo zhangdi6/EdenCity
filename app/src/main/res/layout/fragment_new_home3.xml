@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_220"
+        android:scaleType="fitXY"
+        android:src="@drawable/back_home_bg" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_height="match_parent"
+        >
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/header_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_100"
+
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/pay_scan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/pay_scan_img"
+                            android:layout_width="@dimen/dp_56"
+                            android:layout_height="@dimen/dp_48"
+                            android:layout_above="@+id/tv_pay_scan"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:background="@mipmap/fu" />
+
+                        <com.edencity.customer.custum.MyMediumTextView
+                            android:id="@+id/tv_pay_scan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="付款码"
+
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/scan_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/scan_search_img"
+                            android:layout_width="@dimen/dp_56"
+                            android:layout_height="@dimen/dp_48"
+                            android:layout_above="@+id/tv_scan"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:background="@mipmap/sao" />
+
+                        <com.edencity.customer.custum.MyMediumTextView
+                            android:id="@+id/tv_scan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="扫一扫"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rechargr"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/rechargr_img"
+                            android:layout_width="@dimen/dp_56"
+                            android:layout_height="@dimen/dp_48"
+                            android:layout_above="@+id/tv_add_money"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:background="@mipmap/chong2" />
+
+                        <com.edencity.customer.custum.MyMediumTextView
+                            android:id="@+id/tv_add_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="充值"
+                            android:textColor="@color/white"
+
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_74"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:background="@drawable/bg_white_conner_10"
+
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/sign_in"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv1"
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@mipmap/qian" />
+
+                        <com.edencity.customer.custum.MyMediumTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv1"
+                            android:text="签到领值"
+                            android:textColor="#333333"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/invitation"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/iv2"
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_marginLeft="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_44"
+                            android:layout_centerVertical="true"
+                            android:background="@mipmap/yao" />
+
+                        <com.edencity.customer.custum.MyMediumTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv2"
+                            android:text="邀请有礼"
+                            android:textColor="#333333"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--</com.zyp.cardview.YcCardView>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_150"
+                    android:background="@color/white"
+                    android:paddingHorizontal="7dp"
+                    android:visibility="visible">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="@dimen/dp_5"
+                        android:layout_margin="10dp">
+
+                        <com.xw.banner.Banner
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:indicator_drawable_selected="@drawable/point_selecter_yes"
+                            app:indicator_drawable_unselected="@drawable/point_selecter"
+                            app:indicator_margin="@dimen/dp_4"
+                            app:is_auto_play="true" />
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+
+                    android:layout_height="wrap_content">
+                    <com.edencity.customer.custum.MyMediumTextView
+                        android:layout_width="wrap_content"
+                        android:text="伊甸创新创业基地"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_14"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_100"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:visibility="visible">
+
+                        <com.edencity.customer.custum.MyMediumTextView
+                            android:id="@+id/shuangchaung"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_15"
+                            android:gravity="center"
+                            android:text="双创产业"
+                            android:background="@drawable/shuangchaung"
+                            android:scaleType="centerCrop">
+
+                        </com.edencity.customer.custum.MyMediumTextView>
+
+                        <com.edencity.customer.custum.MyMediumTextView
+                            android:id="@+id/shixun"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:text="大消费业态"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_15"
+                            android:gravity="center"
+                            android:background="@drawable/shixun"
+                            android:scaleType="centerCrop">
+
+                        </com.edencity.customer.custum.MyMediumTextView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_3d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/dp_16"
+                    android:background="@color/white"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_d3"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_marginBottom="@dimen/dp_8"
+                        android:layout_height="100dp">
+                        <ImageView
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_60"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/yuan_3d" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/team_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/team_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:text="查看更多 >"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView38"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView38" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rlv_team"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:overScrollMode="never"
+                        android:background="@null"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+                    <com.edencity.customer.custum.MyMediumTextView
+                        android:id="@+id/textView38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:text="双创企业"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_15"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/ip_layout"
+                    android:background="@color/white"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.edencity.customer.custum.MyMediumTextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:text="IP产品"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_15"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/ip_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:text="查看更多 >"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView40"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView40" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rlv_more"
+                        android:layout_width="0dp"
+                        android:overScrollMode="never"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/shop_layout"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+
+                    android:layout_height="wrap_content">
+
+                    <com.edencity.customer.custum.MyMediumTextView
+                        android:id="@+id/textView46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:text="品牌推荐"
+                        android:textColor="#333333"
+                        android:textSize="@dimen/sp_15"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/shop_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:text="查看更多 >"
+                        android:visibility="gone"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/sp_11"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView46"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView46" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rlv_shop"
+                        android:overScrollMode="never"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

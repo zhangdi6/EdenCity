@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.activity.ShopActivity">
+
+    <include layout="@layout/item_layout_shop"/>
+    <com.edencity.customer.custum.TwoBallRotationProgressBar
+        android:layout_width="match_parent"
+        android:id="@+id/loading"
+        android:background="#80FFFFFF"
+        android:layout_height="match_parent"/>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:paddingTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/view_three"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginEnd="16dp"
+            android:paddingVertical="@dimen/dp_8"
+
+            android:src="@mipmap/view"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+
+            android:paddingVertical="@dimen/dp_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon_back_white" />
+
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

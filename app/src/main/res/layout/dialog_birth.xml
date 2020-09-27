@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_top_conner_white_10">
+
+        <TextView
+            android:id="@+id/cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="取消"
+            android:textColor="@color/tv333"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sure"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical"
+            android:text="确定"
+            android:textColor="@color/blue_nomal"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:text="年"
+            android:textColor="@color/tv333"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/loop"
+            app:layout_constraintStart_toEndOf="@+id/loop"
+            app:layout_constraintTop_toTopOf="@+id/loop" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:text="月"
+            android:textColor="@color/tv333"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/loop2"
+            app:layout_constraintStart_toEndOf="@+id/loop2"
+            app:layout_constraintTop_toTopOf="@+id/loop2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            android:text="日"
+            android:textColor="@color/tv333"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/loop2"
+            app:layout_constraintStart_toEndOf="@+id/loop3"
+            app:layout_constraintTop_toTopOf="@+id/loop2" />
+
+        <com.weigan.loopview.LoopView
+            android:id="@+id/loop"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_100"
+            android:layout_below="@id/cancle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="32dp"
+            app:awv_centerTextColor="@color/black"
+            app:awv_isLoop="true"
+            app:awv_itemsVisibleCount="5"
+            app:awv_outerTextColor="@color/tv999"
+            app:awv_textsize="18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/loop2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cancle" />
+
+
+        <com.weigan.loopview.LoopView
+            android:id="@+id/loop2"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_100"
+            android:layout_below="@id/cancle"
+            android:layout_centerHorizontal="true"
+            app:awv_centerTextColor="@color/black"
+            app:awv_isLoop="true"
+            app:awv_itemsVisibleCount="5"
+            app:awv_outerTextColor="@color/tv999"
+            app:awv_textsize="18"
+            app:layout_constraintBottom_toBottomOf="@+id/loop"
+            app:layout_constraintEnd_toStartOf="@+id/loop3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/loop"
+            app:layout_constraintTop_toTopOf="@+id/loop" />
+
+        <com.weigan.loopview.LoopView
+            android:id="@+id/loop3"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_100"
+            android:layout_below="@id/cancle"
+            android:layout_centerHorizontal="true"
+            app:awv_centerTextColor="@color/black"
+            app:awv_isLoop="true"
+            app:awv_itemsVisibleCount="5"
+            app:awv_outerTextColor="@color/tv999"
+            app:awv_textsize="18"
+            app:layout_constraintBottom_toBottomOf="@+id/loop2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/loop2" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

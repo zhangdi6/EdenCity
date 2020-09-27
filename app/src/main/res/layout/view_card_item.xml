@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="@dimen/dp_16"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/level"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_8"
+        android:orientation="horizontal">
+        <!--
+        <com.edencity.customer.custum.MyNormalTextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_tag_alpha_white"
+            android:drawablePadding="@dimen/dp_4"
+            android:paddingHorizontal="@dimen/dp_6"
+            android:paddingVertical="@dimen/dp_3"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11" />-->
+
+        <com.edencity.customer.custum.MyNormalTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10" />
+
+
+    </LinearLayout>
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_12"
+
+        android:background="@drawable/vip_level"
+        android:paddingHorizontal="@dimen/dp_36"
+        android:paddingVertical="@dimen/dp_5"
+        android:text="二级汇员"
+        android:textColor="@color/transparent"
+        android:textSize="@dimen/sp_13" />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="哈哈哈"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12" />
+
+    <com.edencity.customer.custum.MyNormalTextView
+        android:id="@+id/buy_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginEnd="@dimen/dp_14"
+        android:text="购买记录 >"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_11" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_header"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_36"
+        android:background="@mipmap/user_head"
+        app:civ_border_width="0dp" />
+
+    <ImageView
+        android:id="@+id/tagg"
+        android:layout_width="@dimen/dp_70"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_height="@dimen/dp_70"
+        android:background="@drawable/taggg1"/>
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#eaeaea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/tag_text"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_25"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_tag"
+        android:gravity="center"
+        android:text="赠"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintStart_toEndOf="@+id/end"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/look_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/blue_nomal"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toTopOf="@+id/view10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/order_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="二级会员：年卡"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.edencity.customer.custum.MyNormalTextView
+        android:id="@+id/begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:text="赠送时间：2019-11-24"
+        android:textColor="#666666"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toTopOf="@+id/view10"
+        app:layout_constraintStart_toStartOf="@+id/end"
+        app:layout_constraintTop_toBottomOf="@+id/end" />
+
+    <com.edencity.customer.custum.MyNormalTextView
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="有效期至：2021-11-24"
+        android:textColor="#666666"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toStartOf="@+id/order_type"
+        app:layout_constraintTop_toBottomOf="@+id/order_type" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_conner_10">
+
+    <!--<com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/go_to_charge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/kaitong"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dp_12"
+        android:text="立即充值续费"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlv" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <ImageView
+        android:id="@+id/img_tag"
+        android:layout_width="72dp"
+        android:layout_height="@dimen/dp_72"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/qidai"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/textView31"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/quanyibg"
+        android:gravity="center"
+        android:text="可享权益"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+  <!--  <com.edencity.customer.custum.MyNormalTextView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_28"
+        android:background="@mipmap/kaitong"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_5"
+        android:text="开通赠送365伊甸币"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/go_to_charge"
+        app:layout_constraintTop_toBottomOf="@+id/rlv" />-->
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingTop="@dimen/statusbar_height">
+<RelativeLayout
+    android:layout_width="110dp"
+    android:paddingRight="@dimen/dp_10"
+    android:layout_gravity="right"
+    android:layout_height="@dimen/dp_48">
+
+    <ImageView
+        android:id="@+id/btn_bill_msg"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_48"
+        android:paddingHorizontal="@dimen/dp_13"
+        android:paddingTop="@dimen/dp_12"
+        android:src="@mipmap/msg"
+        android:visibility="visible" />
+    <ImageView
+        android:id="@+id/btn_bill_list"
+        android:layout_width="@dimen/dp_50"
+        android:layout_toRightOf="@id/btn_bill_msg"
+        android:layout_height="@dimen/dp_48"
+        android:layout_alignParentRight="true"
+        android:onClick="onViewItemClicked"
+        android:paddingHorizontal="@dimen/dp_13"
+        android:paddingTop="@dimen/dp_12"
+        android:src="@mipmap/setting" />
+
+
+    <TextView
+        android:id="@+id/tag_text"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:textSize="@dimen/sp_10"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="2"
+        android:background="@drawable/badge" />
+</RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_100">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_avatar"
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_80"
+                        android:layout_marginStart="24dp"
+                        android:background="@mipmap/user_head"
+                        app:civ_border_width="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.edencity.customer.custum.MyMediumTextView
+                        android:id="@+id/user_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/active_value"
+                        app:layout_constraintStart_toEndOf="@+id/image_avatar"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/user_edit_phone"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_12"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/user_phone"
+                        app:layout_constraintStart_toEndOf="@+id/user_phone"
+                        app:layout_constraintTop_toTopOf="@+id/user_phone"
+                        app:srcCompat="@mipmap/edit_img" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:id="@+id/text_user_approval_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/text_bg_blue_15"
+                        android:includeFontPadding="false"
+                        android:paddingHorizontal="@dimen/dp_14"
+                        android:paddingVertical="@dimen/dp_4"
+                        android:text="实名认证"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toTopOf="@+id/result_desc"
+                        app:layout_constraintStart_toStartOf="@+id/user_phone" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:id="@+id/active_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/green_bg_10"
+                        android:paddingHorizontal="@dimen/dp_14"
+                        android:paddingVertical="@dimen/dp_4"
+                        android:text="活跃值"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_10"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_user_approval_result"
+                        app:layout_constraintStart_toEndOf="@+id/text_user_approval_result"
+                        app:layout_constraintTop_toTopOf="@+id/text_user_approval_result" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:id="@+id/result_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="实名认证后即可成为一级会员开通赠送30点活跃值"
+                        android:textColor="#666666"
+                        android:textSize="9sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/image_avatar"
+                        app:layout_constraintStart_toStartOf="@+id/text_user_approval_result" />
+                </android.support.constraint.ConstraintLayout>
+
+                <RelativeLayout
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/bg_card_normal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="48dp"
+                        android:orientation="horizontal">
+
+                        <com.edencity.customer.custum.MyMediumTextView
+                            android:id="@+id/text_cash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:minWidth="@dimen/dp_50"
+                            android:text="0.00"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_18" />
+
+
+                            <ImageView
+                                android:id="@+id/see"
+                                android:layout_width="@dimen/dp_40"
+                                android:layout_centerInParent="true"
+                                android:layout_height="@dimen/dp_40"
+                                android:button="@null"
+                                android:paddingHorizontal="@dimen/dp_12"
+                                android:paddingVertical="@dimen/dp_15"
+                                android:src="@mipmap/see_close"
+                                />
+
+
+                    </LinearLayout>
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="@dimen/dp_24"
+                        android:gravity="center_vertical"
+                        android:text="预付卡余额"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:id="@+id/recharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:background="@drawable/bg_white_conner_20_bg"
+                        android:paddingHorizontal="@dimen/dp_24"
+                        android:paddingVertical="7dp"
+                        android:text="充值"
+                        android:textColor="@color/blue_nomal"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:onClick="onViewItemClicked"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/my_order" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="我的账单"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/next" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#e0e0e0"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_chage_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:onClick="onViewItemClicked"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@mipmap/change_card" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="我的兑换券"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/next" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#e0e0e0"/>
+
+                <LinearLayout
+                    android:id="@+id/layout_will_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:onClick="onViewItemClicked"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:background="@mipmap/will_yes" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/next" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="我的预定"
+                        android:textColor="@color/text_black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_10"
+                    android:background="#f5f5f5"/>
+                <LinearLayout
+                    android:id="@+id/layout_security"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:onClick="onViewItemClicked"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:background="@mipmap/safe" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="安全中心"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/next" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#e0e0e0"/>
+                <LinearLayout
+                    android:id="@+id/layout_feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:onClick="onViewItemClicked"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:background="@mipmap/feedback" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="意见反馈"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/next" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#e0e0e0"/>
+                <LinearLayout
+                    android:id="@+id/layout_about_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:onClick="onViewItemClicked"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:background="@mipmap/icon_about_us" />
+
+                    <com.edencity.customer.custum.MyNormalTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="关于我们"
+                        android:textColor="@color/text_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:layout_width="8dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/next" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#e0e0e0"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

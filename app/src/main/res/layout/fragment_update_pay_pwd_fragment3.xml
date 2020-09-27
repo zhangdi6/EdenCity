@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".user.fragment.UpdatePayPwdFragment2">
+
+    <EditText
+        android:id="@+id/et_verify_code_1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_verify_code_edit"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_verify_code_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <EditText
+        android:id="@+id/et_verify_code_2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_verify_code_edit"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_1"
+        app:layout_constraintEnd_toStartOf="@+id/et_verify_code_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_verify_code_1" />
+
+    <EditText
+        android:id="@+id/et_verify_code_3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_verify_code_edit"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_2"
+        app:layout_constraintEnd_toStartOf="@+id/et_verify_code_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_verify_code_2" />
+
+    <EditText
+        android:id="@+id/et_verify_code_4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_verify_code_edit"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_3"
+        app:layout_constraintEnd_toStartOf="@+id/et_verify_code_5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_verify_code_3" />
+
+    <EditText
+        android:id="@+id/et_verify_code_5"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_verify_code_edit"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_4"
+        app:layout_constraintEnd_toStartOf="@+id/et_verify_code_6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_verify_code_4" />
+
+    <EditText
+        android:id="@+id/et_verify_code_6"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_verify_code_edit"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_verify_code_5" />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="请再次输入支付密码"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toStartOf="@+id/et_verify_code_1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.edencity.customer.custum.MyNormalTextView
+        android:id="@+id/tag_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="两次输入密码不一致，请重新输入"
+        android:textColor="#ff4848"
+        android:textSize="@dimen/sp_13"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/et_verify_code_1"
+        app:layout_constraintTop_toBottomOf="@+id/et_verify_code_1" />
+</android.support.constraint.ConstraintLayout>

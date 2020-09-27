@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".user.activity.MyCertificateActivity">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_14"
+            app:layout_constraintBottom_toTopOf="@+id/view11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_black" />
+
+        <View
+            android:id="@+id/view11"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_10"
+            android:background="#f5f5f5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.edencity.customer.custum.MyMediumTextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实训平台"
+            android:textColor="#333333"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toTopOf="@+id/view11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/constraintLayout5"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp_3"
+        app:tabBackground="@null"
+        app:tabRippleColor="@null"
+        app:tabIndicatorFullWidth="false"
+        app:tabGravity="center"
+        app:tabInlineLabel="true"
+        app:tabIndicatorColor="@color/blue_nomal"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/blue_nomal"
+        app:tabTextColor="#333333"/>
+
+   <!-- <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_below="@id/constraintLayout5"
+        app:xTabBackgroundColor="@color/white"
+        app:xTabIndicatorColor="@color/blue_nomal"
+        app:xTabSelectedTextColor="@color/blue_nomal"
+        app:xTabTextColor="#333333"
+        app:xTabMode="scrollable"
+        app:xTabDividerGravity="center"
+        app:xTabDisplayNum="7"
+        app:xTabIndicatorHeight="@dimen/dp_2"
+        app:xTabDividerWidthWidthText="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"/>-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:overScrollMode="never"
+        android:layout_below="@id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</RelativeLayout>

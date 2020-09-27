@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_card_normal"
+    android:layout_margin="@dimen/dp_5"
+    android:layout_height="@dimen/dp_100">
+
+    <com.edencity.customer.custum.MyNormalTextView
+        android:id="@+id/rechage_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="2dp"
+        android:text="金额: "
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/recharge_total_money"
+        app:layout_constraintEnd_toStartOf="@+id/recharge_total_money" />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/recharge_total_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="13dp"
+        android:text="3000"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/card_id"
+        android:textSize="@dimen/sp_13"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

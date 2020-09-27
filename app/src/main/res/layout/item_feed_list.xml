@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="@dimen/dp_90"
+        android:scaleType="centerCrop"
+
+        android:layout_height="@dimen/dp_90"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/desc"
+        app:layout_constraintTop_toBottomOf="@+id/desc"
+       />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90"
+        android:scaleType="centerCrop"
+
+        android:layout_marginStart="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img1"
+        app:layout_constraintStart_toEndOf="@+id/img1"
+        app:layout_constraintTop_toTopOf="@+id/img1"
+       />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="@dimen/dp_90"
+        android:scaleType="centerCrop"
+        android:layout_height="@dimen/dp_90"
+        android:layout_marginStart="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img2"
+        app:layout_constraintStart_toEndOf="@+id/img2"
+        app:layout_constraintTop_toTopOf="@+id/img2"
+       />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="反馈内容"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.edencity.customer.custum.MyNormalTextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="2020-01-02"
+        android:textSize="13sp"
+        android:textColor="#333333"
+        app:layout_constraintBottom_toBottomOf="@+id/textView34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView34" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="就开始等方面对方V领"
+        android:textSize="13sp"
+        android:lineSpacingExtra="@dimen/dp_1"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="@+id/time"
+        app:layout_constraintStart_toStartOf="@+id/textView34"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/feed_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="回复内容"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintStart_toStartOf="@+id/img1"
+        app:layout_constraintTop_toBottomOf="@+id/img1" />
+
+    <TextView
+        android:id="@+id/feed_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:lineSpacingExtra="1dp"
+        android:textColor="#333333"
+        android:text="sad甲方hi安徽妇女看见爱上道具卡大V粘合剂是快递费"
+        app:layout_constraintEnd_toEndOf="@+id/desc"
+        app:layout_constraintStart_toStartOf="@+id/feed_ok"
+        app:layout_constraintTop_toBottomOf="@+id/feed_ok" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="16dp"
+        android:background="#f5f5f5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feed_desc" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,36 @@
+<resources>
+    <plurals name="error_over_count">
+        <item quantity="one">您只能选择1个图片</item>
+        <item quantity="many">您最多只能选择 %1$d 个图片</item>
+    </plurals>
+
+    <!--通用 -->
+    <string name="eden_enterprise_name">伊甸城商业管理公司</string>
+
+    <string name="button_get_verify_code">获取验证码</string>
+
+    <string name="app_name">伊甸城</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firstpage">首页</string>
+    <string name="vip">汇员中心</string>
+    <string name="shopcart">我的</string>
+    <string name="recharge_card">预付卡充值</string>
+    <string name="card">预付卡</string>
+    <string name="pay_succese">充值成功</string>
+    <string name="product_detail">商品详情</string>
+    <string name="total_active_value">当前活跃值</string>
+    <string name="get_active_value">获取活跃值</string>
+    <string name="card_balance">预付卡余额</string>
+    <string name="rechage_money">充值金额</string>
+    <string name="pay_type">支付方式</string>
+    <string name="verifing">身份认证中，认证通过才可进行充值及付款哦~</string>
+    <string name="please_goto_verify">认证通过后即获得30点活跃值，快去认证吧~</string>
+    <string name="verify_failed">您的实名认证未通过，请重新认证~</string>
+    <string name="had_no_veirify">您还没有实名认证，为保证您的资金安全，请先进行实名认证</string>
+    <string name="register_name_">._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+    <string name="rule_password">`¬!"£$%^*()~=#{}[];'。，？！；;&amp;:,./?/*-+&#060;&#062;&#064;&#038;</string>
+
+
+</resources>

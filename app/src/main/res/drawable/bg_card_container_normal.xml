@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#104863f8" />
+            <padding android:bottom="6px" android:left="6px" android:right="4px" android:top="4px" />
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#124863f8" />
+            <padding android:bottom="4px" android:left="2px" android:right="2px" android:top="2px" />
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#144863f8" />
+            <padding android:bottom="3px" android:left="2px" android:right="2px" android:top="2px" />
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#164863f8" />
+            <padding android:bottom="2px" android:left="1px" android:right="1px" android:top="1px" />
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#184863f8" />
+            <padding android:bottom="1px" android:left="1px" android:right="1px" android:top="1px" />
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#204863f8" />
+            <padding android:bottom="3px" android:left="2px" android:right="2px" android:top="1px" />
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap android:src="@drawable/yufuka_bg"/>
+    </item>
+</layer-list>

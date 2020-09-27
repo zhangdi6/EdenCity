@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/layout"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="@dimen/dp_50"
+        android:background="@drawable/update_bg">
+
+        <LinearLayout
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.edencity.customer.custum.MyMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="发现新版本"
+                android:textColor="@color/tv333"
+                android:textSize="@dimen/sp_14" />
+
+            <com.edencity.customer.custum.MyNormalTextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:background="@drawable/text_bg_version"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/dp_20"
+                android:paddingVertical="@dimen/dp_2"
+                android:text="V2.0.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView41">
+
+            <LinearLayout
+                android:id="@+id/update_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.edencity.customer.custum.MyNormalTextView
+                    android:id="@+id/update_later"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:background="@drawable/text_bg_later"
+                    android:gravity="center"
+                    android:paddingHorizontal="24dp"
+                    android:text="稍后更新"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="visible" />
+
+                <com.edencity.customer.custum.MyNormalTextView
+                    android:id="@+id/update_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:background="@drawable/text_bg_now"
+                    android:gravity="center"
+                    android:paddingHorizontal="24dp"
+                    android:text="立即更新"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/process_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40">
+                <ProgressBar
+                    android:id="@+id/process"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_height="3dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progressbar_style_update"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    />
+                <com.edencity.customer.custum.MyNormalTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新中..."
+                    android:textColor="@color/tv999"
+                    android:layout_below="@id/process"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:textSize="@dimen/sp_11"/>
+                <com.edencity.customer.custum.MyNormalTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/blue_nomal"
+                    android:layout_below="@id/process"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:id="@+id/proce"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:textSize="@dimen/sp_11"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:lineSpacingExtra="@dimen/dp_10"
+            android:text="跟新了很多东西has哈哈哈是否\n还有跟过啊数据费你点击\n还有跟过啊数据费你点击"
+            android:textColor="#666666"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

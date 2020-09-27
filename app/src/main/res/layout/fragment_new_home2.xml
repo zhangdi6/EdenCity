@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FC"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/imag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_170"
+        android:background="#3287F6"
+        android:scaleType="centerCrop" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30">
+          <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_200">
+
+                    <LinearLayout
+                        android:id="@+id/header_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_100"
+                        android:layout_marginVertical="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/pay_scan"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_90"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/pay_scan_img"
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                android:layout_above="@+id/tv_pay_scan"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="@dimen/dp_8"
+                                android:background="@mipmap/icon_code" />
+
+                            <com.edencity.customer.custum.MyMediumTextView
+                                android:id="@+id/tv_pay_scan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:text="付款码"
+
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/scan_search"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_90"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/scan_search_img"
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                android:layout_above="@+id/tv_scan"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="@dimen/dp_8"
+                                android:background="@mipmap/icon_scan" />
+
+                            <com.edencity.customer.custum.MyMediumTextView
+                                android:id="@+id/tv_scan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:text="扫一扫"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rechargr"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_90"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/rechargr_img"
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                android:layout_above="@+id/tv_add_money"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="@dimen/dp_8"
+                                android:background="@mipmap/icon_chage" />
+
+                            <com.edencity.customer.custum.MyMediumTextView
+                                android:id="@+id/tv_add_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:text="充值"
+                                android:textColor="@color/white"
+
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_90"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/dp_12">
+
+                        <RelativeLayout
+                            android:id="@+id/sign_in"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_80"
+                            android:layout_marginHorizontal="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_white_conner_10"
+                            app:layout_constraintEnd_toStartOf="@+id/invitation"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_60"
+                                android:layout_height="@dimen/dp_60"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:background="@mipmap/qiandao" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tt1"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_marginTop="@dimen/dp_8"
+                                android:text="天天领取"
+                                android:textColor="#999999"
+                                android:textSize="@dimen/sp_11" />
+
+                            <TextView
+                                android:id="@+id/tt1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_marginTop="@dimen/dp_12"
+                                android:text="签到领值"
+                                android:textColor="#FE6730"
+                                android:textSize="@dimen/sp_18"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/invitation"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_80"
+                            android:layout_marginHorizontal="@dimen/dp_6"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_white_conner_10"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/sign_in">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_60"
+                                android:layout_height="@dimen/dp_60"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:background="@mipmap/yaoqing" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tt2"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_marginTop="@dimen/dp_8"
+                                android:text="呼朋唤友赚伊币"
+                                android:textColor="#999999"
+                                android:textSize="@dimen/sp_11" />
+
+                            <TextView
+                                android:id="@+id/tt2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_marginTop="@dimen/dp_12"
+                                android:text="邀请有礼"
+                                android:textColor="#FE6730"
+                                android:textSize="@dimen/sp_18"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+                <!--   <ImageView
+                       android:id="@+id/banner_img"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/dp_90"
+                       android:layout_marginHorizontal="10dp"
+
+                       android:background="@drawable/home_bg"
+                       android:scaleType="fitXY" />-->
+                <!-- <com.zyp.cardview.YcCardView
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/dp_70"
+                     android:layout_marginHorizontal="15dp"
+                     app:ycCardCornerRadius="10dp"
+                     app:ycCardElevation="8dp"
+                     app:ycCardMaxElevation="8dp"
+                     app:ycCardPreventCornerOverlap="true"
+                     app:ycStartShadowColor="#F0EEEE"
+                     >-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    android:id="@+id/rlv"
+                    android:layout_height="wrap_content"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:id="@+id/rlv_shop"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

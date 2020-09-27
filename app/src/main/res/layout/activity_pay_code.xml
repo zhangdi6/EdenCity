@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+
+        android:paddingTop="@dimen/dp_20"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/clear"
+            android:onClick="onViewItemClicked"
+            android:src="@mipmap/back_black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="49dp"
+            android:gravity="center"
+            android:text="付款码"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="311dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/fukuanma_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/huahua"/>
+        <ImageView
+            android:id="@+id/image_qrcode"
+            android:layout_width="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_height="200dp"
+            android:layout_marginTop="40dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_qrcode"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="每分钟自动更新，付款码仅限当面使用"
+            android:textColor="#909090"
+            android:textSize="@dimen/sp_13" />
+
+    </RelativeLayout>
+
+</LinearLayout>

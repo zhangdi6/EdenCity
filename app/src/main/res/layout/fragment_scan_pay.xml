@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:paddingTop="@dimen/statusbar_height"
+        >
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:onClick="onViewItemClicked"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/back_black"
+            android:background="@color/clear"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="49dp"
+            android:gravity="center"
+            android:text="扫码支付"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_300"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_60"
+                app:cardCornerRadius="@dimen/dp_4"
+                app:cardElevation="@dimen/dp_3"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:layout_height="match_parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edit_fee"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@null"
+                        android:hint="0.00"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/text_black"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <TextView
+                        android:id="@+id/text_store_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:gravity="center_vertical"
+                        android:text="海底捞（ 伊甸城店 ）"
+                        android:textColor="@color/text_black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.edencity.customer.custum.MyMediumTextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="伊甸果"
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/edit_fee"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <com.edencity.customer.custum.MyMediumTextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="28dp"
+                        android:text="请输入"
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_store_name" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="#f5f5f5"
+                        app:layout_constraintBottom_toBottomOf="@+id/edit_fee"
+                        app:layout_constraintEnd_toEndOf="@+id/edit_fee"
+                        app:layout_constraintStart_toStartOf="@+id/edit_fee" />
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ciecle"
+                android:elevation="@dimen/dp_4"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_store"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_centerInParent="true"
+                    android:layout_height="@dimen/dp_80"
+                    android:background="@mipmap/def_shop_icon" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="48dp"
+            android:background="@drawable/text_bg_gray"
+            android:enabled="false"
+            android:onClick="onViewItemClicked"
+            android:text="支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+    </android.support.constraint.ConstraintLayout>
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="付款给商家"
+            android:textSize="14sp"
+            android:textColor="@color/text_black"/>
+
+
+
+    </RelativeLayout>
+
+
+
+    -->
+
+</LinearLayout>

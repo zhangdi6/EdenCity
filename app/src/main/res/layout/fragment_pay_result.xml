@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:paddingTop="@dimen/statusbar_height"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:onClick="onViewItemClicked"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/back_black"
+            android:background="@color/clear"/>
+
+        <com.edencity.customer.custum.MyMediumTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="支付结果"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="60dp"
+        android:paddingBottom="40dp">
+
+        <ImageView
+            android:id="@+id/image_result"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/recharge_ok" />
+
+        <com.edencity.customer.custum.MyMediumTextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/sp_20" />
+
+        <com.edencity.customer.custum.MyNormalTextView
+            android:id="@+id/text_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="充值成功"
+            android:textColor="#666666"
+            android:textSize="@dimen/sp_14" />
+
+        <com.edencity.customer.custum.MyMediumTextView
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginHorizontal="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_80"
+            android:layout_marginRight="@dimen/dp_16"
+            android:background="@drawable/text_bg_blue"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15" />
+    </LinearLayout>
+
+</LinearLayout>

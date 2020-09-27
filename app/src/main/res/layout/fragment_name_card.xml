@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".home.fragment.NameCardFragment">
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="7.5"
+        android:background="@color/clear"
+        android:hint="请输入姓名"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toTopOf="@+id/view29"
+        app:layout_constraintEnd_toEndOf="@+id/view29"
+        app:layout_constraintStart_toEndOf="@+id/textView36"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_weight="2.5"
+        android:text="姓名"
+        android:textColor="#333333"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_card_no"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="7.5"
+        android:background="@color/clear"
+        android:hint="请输入身份证号码"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/textView36"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView36"
+        app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:textSize="@dimen/sp_15"
+        android:layout_weight="2.5"
+        android:text="身份证号码"
+        android:textColor="#333333"
+
+        app:layout_constraintStart_toStartOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/view29" />
+
+    <View
+        android:id="@+id/view30"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="18dp"
+        android:background="#f5f5f5"
+        app:layout_constraintEnd_toEndOf="@+id/edit_name"
+        app:layout_constraintStart_toStartOf="@+id/textView36"
+        app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+    <View
+        android:id="@+id/view29"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="18dp"
+        android:background="#f5f5f5"
+        app:layout_constraintStart_toStartOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginHorizontal="@dimen/dp_60"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/text_bg_blue"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_name"
+        app:layout_constraintTop_toBottomOf="@+id/view30" />
+</android.support.constraint.ConstraintLayout>

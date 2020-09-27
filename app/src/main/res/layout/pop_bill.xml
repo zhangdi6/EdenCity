@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_120"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/all"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:text="全部"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f5f5f5" />
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/rechage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:text="充值"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f5f5f5" />
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/buy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:text="消费"
+        android:gravity="center"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f5f5f5" />
+    <com.edencity.customer.custum.MyMediumTextView
+        android:id="@+id/give"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:text="赠送"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f5f5f5" />
+
+</LinearLayout>

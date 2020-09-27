@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/imag"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_header_bg" />
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp">
+
+        <RelativeLayout
+            android:id="@+id/pay_scan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/dp_4">
+
+            <ImageView
+                android:id="@+id/pay_scan_img"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_above="@+id/tv_pay_scan"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@mipmap/fukuanma" />
+
+            <com.edencity.customer.custum.MyMediumTextView
+                android:id="@+id/tv_pay_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="付款码"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/scan_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/dp_4">
+
+            <ImageView
+                android:id="@+id/scan_search_img"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_above="@+id/tv_scan"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@mipmap/scan_img" />
+
+            <com.edencity.customer.custum.MyMediumTextView
+                android:id="@+id/tv_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="扫一扫"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rechargr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/dp_4">
+
+            <ImageView
+                android:id="@+id/rechargr_img"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_24"
+                android:layout_above="@+id/tv_add_money"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@mipmap/yinlian" />
+
+            <com.edencity.customer.custum.MyMediumTextView
+                android:id="@+id/tv_add_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="预付卡充值"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imag">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_120">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="@dimen/dp_10"
+                        app:cardElevation="6dp">
+
+                        <com.xw.banner.Banner
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:indicator_drawable_selected="@drawable/point_selecter_yes"
+                            app:indicator_drawable_unselected="@drawable/point_selecter"
+                            app:indicator_margin="@dimen/dp_4"
+                            app:is_auto_play="true" />
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/banner_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_90"
+                    android:layout_marginHorizontal="10dp"
+
+                    android:background="@drawable/home_bg"
+                    android:scaleType="fitXY" />
+                <com.zyp.cardview.YcCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_marginHorizontal="15dp"
+                    app:ycCardCornerRadius="10dp"
+                    app:ycCardElevation="8dp"
+                    app:ycCardMaxElevation="8dp"
+                    app:ycCardPreventCornerOverlap="true"
+                    app:ycStartShadowColor="#F0EEEE"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/sign_in"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv1"
+                                android:layout_width="@dimen/dp_25"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="20dp"
+                                android:background="@mipmap/qiandaoo" />
+
+                            <com.edencity.customer.custum.MyMediumTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/iv1"
+                                android:text="签到领值"
+                                android:textColor="#333333"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/invitation"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv2"
+                                android:layout_width="@dimen/dp_25"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_centerVertical="true"
+                                android:background="@mipmap/gift" />
+
+                            <com.edencity.customer.custum.MyMediumTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/iv2"
+                                android:text="邀请有礼"
+                                android:textColor="#333333"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </com.zyp.cardview.YcCardView>
+
+
+                <com.edencity.customer.custum.MyMediumTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="推荐商家"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlv_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

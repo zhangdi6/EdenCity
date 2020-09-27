@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll"
+    android:background="@android:color/transparent"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_4"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="@dimen/dp_2">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_150"
+                android:layout_marginHorizontal="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/item_gray"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_150"
+                android:layout_marginHorizontal="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/gray_translance">
+
+                <ImageView
+                    android:id="@+id/item_gray_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_44"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/yilingwan" />
+                <TextView
+                    android:id="@+id/item_gray_tv"
+                    android:textColor="@color/text_gray"
+                    android:textSize="@dimen/dp_10"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tag"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignLeft="@id/item_iv"
+                android:layout_alignTop="@id/item_iv"
+                android:background="@drawable/bgbgbg_dra"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:paddingVertical="@dimen/dp_2"
+                android:text="需要活跃值达到50点"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_iv"
+                android:layout_alignLeft="@id/item_iv"
+                android:layout_marginTop="@dimen/dp_6"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="这里是SD卡哈"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <com.edencity.customer.custum.MyNormalTextView
+                android:id="@+id/get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/item_iv"
+                android:layout_alignBottom="@id/item_price"
+                android:background="@drawable/text_bg_blue"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/dp_10"
+                android:paddingVertical="@dimen/dp_5"
+                android:text="领取0/3"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <com.edencity.customer.custum.MyNormalTextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_name"
+                android:layout_alignLeft="@id/item_iv"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="20元"
+                android:textColor="#999999"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <com.edencity.customer.custum.MyNormalTextView
+                android:id="@+id/item_need_active"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_price"
+                android:layout_alignLeft="@id/item_iv"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:text="所需活跃值"
+                android:textColor="#FAC226"
+                android:textSize="11sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
